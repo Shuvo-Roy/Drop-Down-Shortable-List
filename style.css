@@ -45,8 +45,17 @@ body{
     height: 60px;
     width: 60px;
 }
+.draggable-list li.over .draggable{
+    background-color: #eaeaea;
+}
 .draggable-list .person-name{
     margin: 0 20px 0 0;
+}
+.draggable-list li.right .person-name{
+    color: #3ae374;
+}
+.draggable-list li.wrong .person-name{
+    color: #ff3838;
 }
 .draggable{
     cursor: pointer;
@@ -55,4 +64,20 @@ body{
     justify-content: space-between;
     padding: 15px;
     flex: 1;
+}
+
+.check-btn{
+    background-color: var(--background-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.check-btn:active{
+    transform: scale(0.98);
+}
+.check-btn:focus{
+    outline:none;
 }
