@@ -65,6 +65,21 @@ function swapItems(fromIndex , toIndex){
     listItems[fromIndex].appendChild(itemTwo);
     listItems[toIndex].appendChild(itemOne);
 }
+// check the order of list items
+function checkOrder()
+{
+    listItems.forEach((listItem,index)=>{
+        const personName = listItem.querySelector('.draggable').innerText.trim();
+
+        if(personName !==richestPeople[index]){
+            listItem.classList.add('Wrong');
+        }
+        else{
+            listItem.classList.remove('Wrong');
+            listItem.classList.add('right');
+        }
+    });
+}
 function dragEnter(){
     this.classList.add('over');
 }
@@ -93,3 +108,4 @@ function addEventListener(){
 
 
 }
+check.addEventListener('click',checkOrder);
